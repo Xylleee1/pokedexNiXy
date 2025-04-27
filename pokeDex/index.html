@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PokeDex</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="icon" href="assets/images/pokemon-5.png">
+  <style>@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');</style>
+</head>
+<body>
+
+  <div class="main-content">
+    <div class="left-section">
+      <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search your Pokémon..." />
+        <button onclick="searchPokemon()">Search</button>
+
+      </div>
+      <div class="filter-buttons">
+        <button onclick="filterByType('')" style="background-color: whitesmoke;">All</button>
+        <button onclick="filterByType('fire')" style="background-color: #F08030;">Fire</button>
+        <button onclick="filterByType('water')" style="background-color:#6890F0 ;">Water</button>
+        <button onclick="filterByType('grass')" style="background-color: #78C850;">Grass</button>
+        <button onclick="filterByType('electric')" style="background-color: #F8D030; color: #333;">Electric</button>
+        <button onclick="filterByType('bug')" style="background-color: #A8B820;">Bug</button>
+        <button onclick="filterByType('poison')" style="background-color: #A040A0;">Poison</button>
+        <button onclick="filterByType('ground')" style="background-color:#E0C068 ; color: #333;">Ground</button>
+        <button onclick="filterByType('fairy')" style="background-color: #EE99AC;">Fairy</button>
+        <button onclick="filterByType('normal')" style="background-color: #A8A878;">Normal</button>
+        <button onclick="filterByType('fighting')" style="background-color: #C03028;">Fighting</button>
+        <button onclick="filterByType('psychic')" style="background-color: #F85888;">Psychic</button>
+        <button onclick="filterByType('rock')" style="background-color: #B8A038;">Rock</button>
+        <button onclick="filterByType('ghost')" style="background-color: #705898;">Ghost</button>
+        <button onclick="filterByType('ice')" style="background-color: #98D8D8; color: #333;">Ice</button>
+        <button onclick="filterByType('dragon')" style="background-color: #7038F8;">Dragon</button>
+        <button onclick="filterByType('dark')" style="background-color: #705848;">Dark</button>
+        <button onclick="filterByType('steel')" style="background-color:#B8B8D0 ; color: #333;">Steel</button>
+        <button onclick="filterByType('flying')" style="background-color:#A890F0 ;">Flying</button>
+      </div>
+      <div id="loading" class="loading">Loading Pokémon...</div>
+      <div class="cardContainer" id="poke-container"></div>
+      <button id="loadMoreBtn" class="load-more" onclick="loadMorePokemon()">Load More</button>
+    </div>
+
+    <div class="overlay" id="overlay">
+      <div class="popup">
+        <button class="close-btn" id="closeBtn">&times;</button>
+        <div class="image"></div>
+        <div class="nameNnum">
+          <h3>pokemon name</h3>
+          <h4>number</h4>
+        </div>
+        <div class="details">
+          <div class="height">
+            <p>height: </p>
+            <p>(number)</p>
+          </div>
+          <div class="weight">
+            <p>weight: </p>
+            <p>(numbers)</p>
+          </div>
+          <div class="exp">
+            <p>exp: </p>
+            <p>numbers</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
